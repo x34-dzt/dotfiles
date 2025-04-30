@@ -10,14 +10,16 @@
     docker-compose
     vim
     pavucontrol
+    foot
+    kitty
+    stdenv.cc.cc.lib
+    glibc
+    zlib
+    libglvnd
 
     home-manager
     wireplumber
 
-    # My stuff
-    stdenv.cc.cc.lib
-
-    # KDE applications
     kdePackages.dolphin
   ];
 }

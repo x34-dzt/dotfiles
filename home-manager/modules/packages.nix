@@ -12,24 +12,30 @@
     wl-clipboard
     starship
     brightnessctl
+    pipes
+
+    # ───── Terminal Emulators ─────
+    zsh-autosuggestions
 
     # ───── Terminal Emulators ─────
     kitty
-    alacritty
     ghostty
+    vlc
     tmux
 
     # ───── Editors & IDEs ─────
     neovim
-    zed-editor
     code-cursor
     android-studio
+    (prismlauncher.override {jdks = [jdk8 jdk17 jdk21];})
+    jdk21
 
     # ───── Dev Tools ─────
     git
     fzf
     ripgrep
     lazygit
+    npkill
 
     # ───── Node & Rust Ecosystem ─────
     nodejs
@@ -41,6 +47,9 @@
     rust-analyzer
     alejandra
     rustfmt
+    stylua
+    lua-language-server
+    vtsls
 
     # ───── Fonts & Icons ─────
     font-awesome_5
@@ -61,6 +70,7 @@
     libnotify
     pavucontrol
     wev
+    hyprpaper
 
     # ───── Media ─────
     mpv
@@ -76,5 +86,6 @@
     brave
     google-chrome
     discord
+    slack
   ];
 }

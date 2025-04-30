@@ -1,11 +1,16 @@
 {config, ...}: {
   networking = {
-    hostName = "dhruv";
-    networkmanager = {
-      enable = true;
-    };
+    hostName = "username";
+    wireless = {enable = false;};
+    networkmanager = {enable = true;};
     firewall = {
-      enable = true;
+      enable = false;
+      # allowedUDPPorts = [ ... ];
+      # allowedTCPPorts = [ ... ];
     };
   };
+
+  # boot.extraModulePackages = with config.boot.kernelPackages; [
+  #   rtl8821au  # Alternative Realtek driver
+  # ];
 }

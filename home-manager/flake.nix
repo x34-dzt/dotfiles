@@ -17,14 +17,14 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    homeConfigurations."dhruv" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."username" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
         ./home.nix
         {
           home = {
-            username = "dhruv";
-            homeDirectory = "/home/dhruv";
+            username = "username";
+            homeDirectory = "/home/username";
             stateVersion = "24.11";
           };
         }

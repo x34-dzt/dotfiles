@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  androidSdkPath = "$HOME/Android/Sdk";
-in {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./modules/index.nix
@@ -37,23 +35,6 @@ in {
     LC_TELEPHONE = "en_IN";
     LC_TIME = "en_IN";
   };
-
-  security.rtkit.enable = true;
-
-  environment.sessionVariables = {
-    ANDROID_HOME = androidSdkPath;
-    ANDROID_SDK_ROOT = androidSdkPath;
-    NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1";
-  };
-
-  environment.variables.PATH = with builtins;
-    concatStringsSep ":" [
-      "${androidSdkPath}/platform-tools"
-      "${androidSdkPath}/emulator"
-      "${androidSdkPath}/tools"
-      "$PATH"
-    ];
 
   xdg.portal = {
     enable = true;

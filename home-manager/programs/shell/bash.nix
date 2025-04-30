@@ -9,17 +9,11 @@
     alias gc='git commit'
     alias gl='git pull'
     alias gm='git merge'
+    alias ga='git add'
   '';
 in {
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = true;
-    };
-  };
-
   programs.bash = {
-    enable = true;
+    enable = false;
     initExtra = alias;
   };
 }

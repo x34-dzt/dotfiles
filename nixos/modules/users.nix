@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  users.users.dhruv = {
+  users.users.username = {
     isNormalUser = true;
     description = "I just ship man fuck everything";
-    extraGroups = ["networkmanager" "wheel" "input" "docker" "audio"];
+    extraGroups = ["networkmanager" "adbusers" "wheel" "input" "docker" "audio"];
     shell = pkgs.zsh;
   };
 }
