@@ -1,0 +1,108 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
+      "urgent": "!",
+      "active": "",
+      "default": "-"
+    }
+  },
+  "custom/cava": {
+    "exec": "~/.config/waybar/cava.sh",
+    "format": "{}",
+    "tooltip": false,
+    "restart-interval": 1,
+    "exec-if": "pgrep cava",
+    "on-click": "pavucontrol"
+  },
+  "hyprland/window": {
+    "format": "  {}  ",
+    "rewrite": {
+      "": ""
+    },
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂯 {icon} {volume}% {format_source}",
+    "format-bluetooth-muted": "󰂯 {icon} {format_source}",
+    "format-muted": "󰝟 {format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰄝",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "󰤨  {signalStrength}%",
+    "format-ethernet": "󰈀  {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "󰌹  {ifname} (No IP)",
+    "format-disconnected": "󰌙  Disconnected",
+    "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
+  },
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "tooltip": true
+  },
+  "temperature": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "󰸁 {temperatureC}°C",
+    "format": "󰔏 {temperatureC}°C"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "󰁹 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+  "battery#bat2": {
+    "bat": "BAT1"
+  },
+  "clock": {
+    "format": "󰅐 {:%H:%M | %e %B}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set +1%",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "on-click": "brightnessctl set 100%",
+    "on-click-right": "brightnessctl set 10%"
+  }
+}

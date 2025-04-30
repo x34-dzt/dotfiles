@@ -1,0 +1,23 @@
+// -*- mode: jsonc -*-
+{
+  // position
+  "layer": "top",
+  "position": "top",
+  // height and spacing
+  "spacing": 2,
+  // modules
+  "modules-left": ["custom/cava", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "clock",
+    "backlight",
+  ],
+  //Modules configuration
+  "include": ["~/.config/waybar/modules.json"],
+}
