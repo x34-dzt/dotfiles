@@ -21,7 +21,7 @@ Hey there! This is my **NixOS** setup—crafted with care for devs like me who l
 
 ## 🔸 Why NixOS?
 
-I use **NixOS** 'cause I like things that don’t break randomly. It's fully declarative, super neat, and once you get it—kinda addictive.
+I use **NixOS** 'cause I like things that don’t break randomly. It's fully declarative, super neat, and once you get it—kinda addictive. ( nah don't listen to ai, I just wanted that cool flake logo, and nixos was my first ever linux distro too idk man nix looks cool to me and it is cool )
 
 > If you're curious why it's cool, watch [Vimjoyer’s NixOS video](https://www.youtube.com/@vimjoyer).
 
