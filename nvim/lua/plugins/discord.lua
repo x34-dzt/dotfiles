@@ -19,8 +19,8 @@ return {
         git_commit_text = "Committing changes",
         plugin_manager_text = "Managing plugins",
         reading_text = "Reading bad code",
-        workspace_text = "Working with elon musk",
-        line_number_text = "Line %s out of %s",
+        workspace_text = "Работа с Алей",
+        line_number_text = "Строка %s из %s",
         terminal_text = "Using Terminal",
       })
     end,

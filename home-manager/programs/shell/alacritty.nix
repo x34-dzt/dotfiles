@@ -5,8 +5,8 @@
     settings = {
       font = {
         normal = {
-          family = "JetBrainsMono Nerd Font";
-          style = "Medium";
+          family = "0xProto Nerd Font";
+          style = "Regular";
         };
         size = 12;
       };
@@ -17,7 +17,7 @@
           y = 4;
         };
         dynamic_title = true;
-        opacity = 0.65;
+        opacity = 0.83;
       };
       cursor = {
         style = "Underline";
@@ -29,28 +29,28 @@
       selection.save_to_clipboard = true;
       colors = {
         primary = {
-          background = "#000000"; # Dark blue-purple background
-          foreground = "#D0D0F0"; # Light blue-purple text
+          background = "#1d261a"; # Preserved custom background
+          foreground = "#ebdbb2"; # Gruvbox light foreground
         };
         normal = {
-          black = "#171631"; # Darker blue-purple
-          red = "#FF5C8F"; # Pink-red
-          green = "#88AAFF"; # Light blue
-          yellow = "#C78FFF"; # Light purple
-          blue = "#6D9CFF"; # Medium blue
-          magenta = "#CF78E6"; # Medium magenta
-          cyan = "#78D2FF"; # Light cyan
-          white = "#AABAE8"; # Light blue-white
+          black = "#282828"; # Gruvbox dark0
+          red = "#cc241d"; # Gruvbox red
+          green = "#98971a"; # Gruvbox green
+          yellow = "#d79921"; # Gruvbox yellow
+          blue = "#458588"; # Gruvbox blue
+          magenta = "#b16286"; # Gruvbox purple
+          cyan = "#689d6a"; # Gruvbox aqua
+          white = "#a89984"; # Gruvbox light gray
         };
         bright = {
-          black = "#515173"; # Medium blue-gray
-          red = "#FF8FB3"; # Bright pink
-          green = "#AAC2FF"; # Brighter light blue
-          yellow = "#DCB1FF"; # Bright light purple
-          blue = "#90B8FF"; # Bright medium blue
-          magenta = "#E5A0F0"; # Bright magenta
-          cyan = "#A0E2FF"; # Bright cyan
-          white = "#D0D0F0"; # Bright blue-white
+          black = "#928374"; # Gruvbox dark gray
+          red = "#fb4934"; # Gruvbox bright red
+          green = "#b8bb26"; # Gruvbox bright green
+          yellow = "#fabd2f"; # Gruvbox bright yellow
+          blue = "#83a598"; # Gruvbox bright blue
+          magenta = "#d3869b"; # Gruvbox bright purple
+          cyan = "#8ec07c"; # Gruvbox bright aqua
+          white = "#ebdbb2"; # Gruvbox bright white (matches foreground)
         };
         draw_bold_text_with_bright_colors = true;
       };

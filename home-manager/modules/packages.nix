@@ -13,21 +13,18 @@
     starship
     brightnessctl
     pipes
-
-    # ───── Terminal Emulators ─────
+    fd
     zsh-autosuggestions
+    cbonsai
 
     # ───── Terminal Emulators ─────
-    kitty
-    ghostty
-    vlc
     tmux
 
     # ───── Editors & IDEs ─────
     neovim
     code-cursor
     android-studio
-    (prismlauncher.override {jdks = [jdk8 jdk17 jdk21];})
+    (prismlauncher.override {jdks = [jdk21];})
     jdk21
 
     # ───── Dev Tools ─────
@@ -55,22 +52,17 @@
     font-awesome_5
     bibata-cursors
 
-    # ───── File Managers ─────
-    pcmanfm
-    nautilus
-
     # ───── Hyprland Ecosystem ─────
     waybar
-    eww
-    swww
     rofi-wayland
     hyprshot
     hyprlock
     swaynotificationcenter
     libnotify
     pavucontrol
-    wev
     hyprpaper
+    ghostty
+    kitty
 
     # ───── Media ─────
     mpv
@@ -84,8 +76,6 @@
 
     # ───── Browsers & Apps ─────
     brave
-    google-chrome
     discord
-    slack
   ];
 }

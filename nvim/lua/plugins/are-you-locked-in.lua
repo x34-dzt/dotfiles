@@ -5,7 +5,7 @@ return {
     event = "VeryLazy",
     config = function()
       require("areyoulockedin").setup({
-        session_key = "your session key",
+        session_key = "session key",
       })
     end,
   },

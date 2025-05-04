@@ -1,90 +1,40 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "ellisonleao/gruvbox.nvim",
+    name = "gruvbox",
     priority = 1000,
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha", -- latte, frappe, macchiato, mocha
-        term_colors = true,
-        transparent_background = true,
-        no_italic = false,
-        no_bold = false,
-        styles = {
-          comments = { "italic" },
-          conditionals = { "italic" },
-          loops = {},
-          functions = {},
-          keywords = {},
-          strings = { "italic" },
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-          operators = {},
-        },
-        color_overrides = {},
-        custom_highlights = {},
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          nvimtree = true,
-          telescope = true,
-          bufferline = true,
+      require("gruvbox").setup({
+        terminal_colors = true,
+        undercurl = true,
+        underline = true,
+        bold = true,
+        dim_inactive = false,
+        transparent_mode = false, -- set to true if you want full transparency
+        contrast = "hard",
+        italic = {
+          strings = true,
+          comments = true,
+          operators = false,
+          folds = true,
+          emphasis = false,
         },
       })
-      vim.cmd("colorscheme catppuccin")
+      vim.cmd("colorscheme gruvbox")
+      -- Uncomment for transparency:
       -- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-      -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
       -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
       -- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
-      -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
-      -- vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
     end,
   },
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     config = function()
-      -- Create a custom theme based on catppuccin with transparent backgrounds
-      local colors = require("catppuccin.palettes").get_palette()
-      local custom_catppuccin = {
-        normal = {
-          a = { fg = colors.base, bg = "NONE", gui = "bold" },
-          b = { fg = colors.text, bg = "NONE" },
-          c = { fg = colors.text, bg = "NONE" },
-        },
-        insert = {
-          a = { fg = colors.base, bg = "NONE", gui = "bold" },
-          b = { fg = colors.text, bg = "NONE" },
-          c = { fg = colors.text, bg = "NONE" },
-        },
-        visual = {
-          a = { fg = colors.base, bg = "NONE", gui = "bold" },
-          b = { fg = colors.text, bg = "NONE" },
-          c = { fg = colors.text, bg = "NONE" },
-        },
-        replace = {
-          a = { fg = colors.base, bg = "NONE", gui = "bold" },
-          b = { fg = colors.text, bg = "NONE" },
-          c = { fg = colors.text, bg = "NONE" },
-        },
-        command = {
-          a = { fg = colors.base, bg = "NONE", gui = "bold" },
-          b = { fg = colors.text, bg = "NONE" },
-          c = { fg = colors.text, bg = "NONE" },
-        },
-        inactive = {
-          a = { fg = colors.surface1, bg = "NONE" },
-          b = { fg = colors.surface1, bg = "NONE" },
-          c = { fg = colors.surface1, bg = "NONE" },
-        },
-      }
-
       require("lualine").setup({
         options = {
-          theme = custom_catppuccin,
+          theme = "gruvbox",
           component_separators = "|",
           section_separators = { left = "", right = "" },
           globalstatus = true,
@@ -121,22 +71,9 @@ return {
               text_align = "left",
             },
           },
-          separator_style = "",
+          separator_style = "slant",
           themable = true,
         },
-        highlights = require("catppuccin.groups.integrations.bufferline").get({
-          styles = { "italic", "bold" },
-          custom = {
-            all = {
-              fill = { bg = "NONE" },
-              background = { bg = "NONE" },
-              tab = { bg = "NONE" },
-              tab_selected = { bg = "NONE" },
-              buffer = { bg = "NONE" },
-              buffer_selected = { bg = "NONE", bold = true, italic = false },
-            },
-          },
-        }),
       })
     end,
   },

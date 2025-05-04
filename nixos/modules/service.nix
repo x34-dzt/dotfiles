@@ -1,20 +1,20 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services = {
+    power-profiles-daemon.enable = true;
     udev.packages = [
       pkgs.android-udev-rules
     ];
     xserver = {
       enable = true;
       xkb.layout = "us";
-    };
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "hyprland";
+      videoDrivers = ["nvidia"];
+      displayManager = {
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
+        defaultSession = "hyprland";
+      };
     };
     pipewire = {
       enable = true;

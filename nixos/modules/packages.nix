@@ -10,8 +10,6 @@
     docker-compose
     vim
     pavucontrol
-    foot
-    kitty
     stdenv.cc.cc.lib
     glibc
     zlib

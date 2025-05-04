@@ -1,67 +1,60 @@
-/* Waybar styling - Minimal version */
 * {
-  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-family: "0xProto Nerd Font", sans-serif;
+  margin-top: 1px;
   font-size: 13px;
   font-weight: 500;
-  transition-property: background-color;
   border-radius: 30px;
-  transition-duration: 0.5s;
   transition: 0.2s all ease;
+  color: #d7dbb1;
 }
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
+  min-height: 10px;
 }
 
 #workspaces {
-  background-color: rgba(0, 0, 0, 1);
-  margin: 4px 4px;
-  padding: 4px 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3px 5px;
   border-radius: 30px;
-  /* border: 2px solid #d0d0f0; */
 }
 
 #workspaces button {
-  padding: 0;
-  margin: 0 4px;
-  color: #b8b8b8;
-  min-width: 20px;
-  min-height: 8px;
+  padding: 0px 2px;
+  margin: 2px 2px;
+  min-height: 1px;
   border-radius: 50%;
-  background-color: #171631;
-}
-
-#workspaces button:hover {
-  background-color: #ffffff;
+  background-color: #1d261a;
 }
 
 #workspaces button.active {
-  background-color: #ff9999;
-  min-width: 40px;
+  background-color: #7cb454;
+  min-width: 30px;
   border-radius: 15px;
 }
 
+/* when a workspace shows up something that is opened on different worksapce than your current one this will trigger */
 #workspaces button.urgent {
   background-color: #eb4d4b;
 }
 
+/* the one that displays the programs name */
 #window {
-  background-color: rgba(0, 0, 0, 1);
-  margin: 4px 2px;
-  padding: 0 2px;
-  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #custom-cava {
-  background-color: rgba(0, 0, 0, 1);
-  margin: 4px 2px;
-  padding: 2px 10px;
-  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 4px 4px;
+}
+
+#custom-cava {
+  margin-left: 5px;
+  padding: 0px 8px;
+}
+
+#clock {
+  margin-right: 5px;
 }
 
 /* All modules on the right */
@@ -71,13 +64,9 @@ window#waybar.hidden {
 #memory,
 #temperature,
 #battery,
-#clock,
-#backlight {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  padding: 4px 7px;
-  margin: 4px 0px;
-  min-width: 50px;
+#clock {
+  padding: 0px 14px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Critical states only */
