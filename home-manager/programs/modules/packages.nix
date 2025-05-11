@@ -16,6 +16,7 @@
     fd
     zsh-autosuggestions
     cbonsai
+    playerctl
 
     # ───── Terminal Emulators ─────
     tmux
@@ -23,8 +24,6 @@
     # ───── Editors & IDEs ─────
     neovim
     code-cursor
-    android-studio
-    (prismlauncher.override {jdks = [jdk21];})
     jdk21
 
     # ───── Dev Tools ─────
@@ -62,7 +61,6 @@
     pavucontrol
     hyprpaper
     ghostty
-    kitty
 
     # ───── Media ─────
     mpv

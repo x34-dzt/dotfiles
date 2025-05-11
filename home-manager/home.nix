@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./modules/index.nix
-    ./programs/index.nix
+    ./programs/modules
+    ./programs/shell
   ];
 
   home.sessionVariables = {

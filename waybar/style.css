@@ -1,110 +1,167 @@
+@define-color base #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
+@define-color muted #6e6a86;
+@define-color subtle #908caa;
+@define-color text #e0def4;
+@define-color love #eb6f92;
+@define-color gold #f6c177;
+@define-color rose #ebbcba;
+@define-color pine #31748f;
+@define-color foam #9ccfd8;
+@define-color iris #c4a7e7;
+
 * {
   font-family: "0xProto Nerd Font", sans-serif;
-  margin-top: 1px;
   font-size: 13px;
-  font-weight: 500;
-  border-radius: 30px;
-  transition: 0.2s all ease;
-  color: #d7dbb1;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition: all 0.2s ease;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
-  min-height: 10px;
+  background-color: transparent;
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+.modules-right {
+  margin: 5px 5px 0 0;
+  border-radius: 12px;
+  background-color: rgba(31, 29, 46, 1);
+}
+
+.modules-center {
+  margin: 5px 0 0 0;
+  border-radius: 12px;
+  background-color: rgba(31, 29, 46, 1);
+}
+
+.modules-left {
+  margin: 5px 0 0 5px;
+  border-radius: 12px;
+  background-color: rgba(31, 29, 46, 1);
+}
+
+button {
+  border: none;
+  padding: 0 5px;
 }
 
 #workspaces {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 3px 5px;
-  border-radius: 30px;
+  margin: 0 2px;
+  padding: 0 2px;
 }
 
 #workspaces button {
-  padding: 0px 2px;
-  margin: 2px 2px;
-  min-height: 1px;
-  border-radius: 50%;
-  background-color: #1d261a;
+  padding: 0;
+  background-color: @muted;
+  color: @muted;
+  font-weight: 500;
+  border-radius: 8;
+  min-height: 8px;
+  min-width: 17px;
+  margin: 6px 2px;
 }
-
 #workspaces button.active {
-  background-color: #7cb454;
-  min-width: 30px;
-  border-radius: 15px;
+  min-width: 28px;
+  background-color: @rose;
 }
 
-/* when a workspace shows up something that is opened on different worksapce than your current one this will trigger */
+#workspaces button:hover {
+  background-color: rgba(38, 35, 58, 0.5);
+}
+
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @love;
+  color: @base;
 }
 
-/* the one that displays the programs name */
-#window {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-#custom-cava {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 4px 4px;
-}
-
-#custom-cava {
-  margin-left: 5px;
-  padding: 0px 8px;
-}
-
-#clock {
-  margin-right: 5px;
-}
-
-/* All modules on the right */
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#temperature,
+#idle_inhibitor,
+#cava,
+#mode,
+#window,
+#clock,
 #battery,
-#clock {
-  padding: 0px 14px;
-  background-color: rgba(0, 0, 0, 0.8);
+#temperature,
+#backlight,
+#wireplumber,
+#mpris,
+#load {
+  padding: 6px 12px;
+  color: @text;
+  border-radius: 10;
 }
 
-/* Critical states only */
-#network.disconnected {
-  color: #eb4d4b;
+#mode {
+  background-color: @pine;
+  color: @base;
 }
 
-#temperature.critical {
-  background-color: #eb4d4b;
-  color: #ffffff;
-}
-
-#battery.critical:not(.charging) {
-  color: #eb4d4b;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#battery.charging {
-  color: #7cfc00;
-  background-color: rgba(124, 252, 0, 0.1);
+#battery.charging,
+#battery.plugged {
+  color: @pine;
 }
 
 @keyframes blink {
   to {
-    background-color: #eb4d4b;
-    color: #181825;
+    background-color: @love;
+    color: @base;
   }
 }
 
-tooltip {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+#battery.critical:not(.charging) {
+  color: @love;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-tooltip label {
-  color: #ffffff;
+#wireplumber.muted {
+  color: @muted;
+}
+
+#mpris.playing {
+  color: @text;
+}
+
+#window {
+  font-weight: 500;
+}
+
+/* Add subtle separators between modules */
+#idle_inhibitor,
+#cava,
+#mode,
+#temperature,
+#window,
+#clock,
+#battery,
+#backlight,
+#wireplumber,
+#mpris,
+#load {
+  border-right: 1px solid rgba(110, 106, 134, 0.2);
+}
+
+.modules-right > widget:last-child > *,
+.modules-left > widget:last-child > *,
+.modules-center > widget:last-child > * {
+  border-right: none;
+}
+
+/* Add hover effects to interactive elements */
+#idle_inhibitor:hover,
+#clock:hover,
+#battery:hover {
+  background-color: rgba(38, 35, 58, 0.5);
 }
