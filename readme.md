@@ -1,3 +1,6 @@
+# NEW DOTFILES COMING SOON :3
+
+
 I am still learning ricing and nixos,
 NixOs was my first ever linux distro, I've been using from like a month now, I love it so much
 so yeah, I am still a newbie here hehe :3
