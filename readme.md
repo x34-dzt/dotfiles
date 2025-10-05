@@ -1,5 +1,7 @@
 # NEW DOTFILES COMING SOON :3
-I haven't got time to update the dotfiles to lastest as I am busy with my work. I am a founding engineer at a startup and I am mostly focused on my work. However my new rice is very productive and I haven't changed it from the last 2 months, and I wish to share this productive rice soon, till then enjoy the kita rice, I will udpate my dotfiles with my latest rice before 2026 starts!! New rice will have, Change wallpaper easily, themes, one waybar but with 3 types of styles, better rofi, and much more... I don't wanna spoil everything xD  
+Hewoo admin here 5th oct 2025, I haven't got time to update the dotfiles to latest as I am busy with my work. I am a founding engineer at a startup and I am mostly focused on my work. However my new rice is very productive and I haven't changed it from the last 2 months, and I wish to share this productive rice soon, till then enjoy the kita rice, I will udpate my dotfiles with my latest rice before 2026 starts!! New rice will have, Change wallpaper easily, themes, one waybar but with 3 types of styles, better rofi, and much more... I don't wanna spoil everything xD
+
+---
 
 I am still learning ricing and nixos,
 NixOs was my first ever linux distro, I've been using from like a month now, I love it so much
